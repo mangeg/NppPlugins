@@ -175,7 +175,7 @@ const TCHAR* getName()
 	TCHAR*	cName = new TCHAR[length + 5];
 	ZeroMemory( cName, sizeof(TCHAR) * length + 5 );
 
-	for ( size_t i = 0; i < length; i++ )
+	for ( int i = 0; i < length; i++ )
 	{
 		cName[i] = name.at( i );
 	}

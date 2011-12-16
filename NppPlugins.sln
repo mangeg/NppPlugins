@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NppLuaDocumenter", "NppLuaDocumenter\NppLuaDocumenter.vcxproj", "{75946746-2D37-4E0D-AF9B-EE9F7E15CBCE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		UNICODE Debug|Win32 = UNICODE Debug|Win32
+		UNICODE Release|Win32 = UNICODE Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{75946746-2D37-4E0D-AF9B-EE9F7E15CBCE}.UNICODE Debug|Win32.ActiveCfg = UNICODE Debug|Win32
+		{75946746-2D37-4E0D-AF9B-EE9F7E15CBCE}.UNICODE Debug|Win32.Build.0 = UNICODE Debug|Win32
+		{75946746-2D37-4E0D-AF9B-EE9F7E15CBCE}.UNICODE Release|Win32.ActiveCfg = UNICODE Release|Win32
+		{75946746-2D37-4E0D-AF9B-EE9F7E15CBCE}.UNICODE Release|Win32.Build.0 = UNICODE Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

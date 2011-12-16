@@ -31,5 +31,5 @@ bool NppPlugin::SetCommand( int index, TCHAR*  cmdName, PFUNCPLUGINCMD pFunc, Sh
 
 void NppPlugin::MessageBox( const TCHAR* caption, const TCHAR* body ) const
 {
-	::MessageBox( NULL, (LPCWSTR) body, (LPCWSTR) caption, MB_OK );
+	::MessageBox( NULL, (LPCTSTR) body, (LPCTSTR) caption, MB_OK );
 }

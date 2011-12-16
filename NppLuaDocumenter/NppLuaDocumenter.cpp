@@ -58,8 +58,11 @@ void NppLuaDocumenter::Document()
 		char*	tmpLine = new char[lineLength + 1];
 		ZeroMemory( tmpLine, sizeof(char) * (lineLength + 1) );
 		::SendMessage( curScintilla, SCI_GETLINE, currentParseLine, (LPARAM) tmpLine );
-
+#ifdef UNICODE
 		line = StringTools::ToUnicode( std::string( tmpLine ) );
+#else
+		line = std::string( tmpLine );
+#endif
 		delete tmpLine;
 
 		if ( FindFunction( line ) )
@@ -97,7 +100,11 @@ void NppLuaDocumenter::Document()
 			{
 				for ( std::vector<tstring>::reverse_iterator it = params.rbegin(); it != params.rend(); it++ )
 				{
+#ifdef UNICODE
 					std::string			ansiName = StringTools::ToAscii( *it );
+#else
+					tstring				ansiName( *it );
+#endif
 					std::stringstream	s;
 					s << "-- " << "@param " << ansiName << std::endl;
 					::SendMessage( curScintilla, SCI_INSERTTEXT, lineStart, (LPARAM) s.str().c_str() );
@@ -213,4 +220,5 @@ BOOL isUnicode()
 {
 	return TRUE;
 }
+
 #endif /* UNICODE */
